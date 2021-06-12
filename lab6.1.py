@@ -2,7 +2,7 @@ import numpy
 import math
 import cv2
 
-image = cv2.imread('images/lab6.1.in.old.jpg')
+image = cv2.imread('images/lab6.1.in.jpg')
 image_gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 image_edges = cv2.Canny(image_gray, 50, 150, apertureSize=3)
 lines = cv2.HoughLinesP(image_edges, 1, numpy.pi/180, 100, minLineLength=100, maxLineGap=10)
